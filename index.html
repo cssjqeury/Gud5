@@ -44,40 +44,40 @@ h4 {color:#eee;font-size:1rem;margin-bottom:12px;}
 footer {background:#252525;padding:30px 0;margin-top:40px;color:#a1a1a1;font-size:.9rem;}
 
 .scrolling-wrapper {
-padding:15px 0 30px 0;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  padding: 15px 0 30px 0;
+  overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .card {
-    display: inline-block;
-  }
+  scrollbar-width: none; /* For Firefox */
 }
 
-.scrolling-wrapper-flexbox {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-
-  .card {
-    flex: 0 0 auto;
-  }
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
+
 .scrolling-wrapper .card {
-border:none;
-padding:0 -105px;
+  display: inline-block;
+  width: 85%; /* Adjust this value to control card width */
+  margin-right: 10px; /* Reduced space between cards */
+  vertical-align: top;
+  border: none;
 }
+
 .scrolling-wrapper img {
-height:300px;
-width:100%;
-background-position:center;
-background-cover:cover;
-object-fit:contain;
-border-radius:10px;
+  height: 200px; /* Reduced height for mobile */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+  .scrolling-wrapper .card {
+    width: 300px; /* Fixed width for larger screens */
+  }
+  .scrolling-wrapper img {
+    height: 300px; /* Original height for larger screens */
+  }
 }
 </style>
 <br><br>
@@ -119,11 +119,12 @@ border-radius:10px;
 		<div class="card"><img src="https://play-lh.googleusercontent.com/g28RpdvTloLnI9uO4hZgcSKD58Rs7tSjv3CpwwwisciuEhHJq5ADPy4Ao00PxKL05h5p=w2560-h1440-rw" ></div>
 		<div class="card"><img src="https://play-lh.googleusercontent.com/R3j0OQDK5ybQssm4gTzSrPLhrTk-y1KDJjqC3ipOutd5Feo1yrnE6vnYXPinre4f7w=w2560-h1440-rw" ></div>
 		<div class="card"><img src="https://play-lh.googleusercontent.com/vJz9J6bHwrONLFBIvtC8u3Imkw4hNlpLlZrbbOpQPW6OG0BVZFTc4KITBD3TBQyWpSE=w2560-h1440-rw" ></div>
+		<div class="card"><img src="https://play-lh.googleusercontent.com/xsoi6B61S3SpYnF035o1bdijETm9E_Ff-Z-mqUH76jmGovj_7Za-7z5B3FSRweMPPY4=w2560-h1440-rw" ></div>
 	</div>
 			
 	<div class="container-md" >
 		<h2>About this app</h2>
-		<p>From the creators of Royal Match comes a brand new match 3 puzzle adventure in Royal Kingdom, starring the extended Royal Family! You’ll meet King Richard, King Robert's younger brother, as well as a charming cast of new characters, including Princess Bella and the Wizard, to embark on a journey to build legendary kingdoms! Solve match 3 puzzles to explore new lands and defeat the Dark King & his army!</p>
+		<p>From the creators of Royal Match comes a brand new match 3 puzzle adventure in Royal Kingdom, starring the extended Royal Family! You'll meet King Richard, King Robert's younger brother, as well as a charming cast of new characters, including Princess Bella and the Wizard, to embark on a journey to build legendary kingdoms! Solve match 3 puzzles to explore new lands and defeat the Dark King & his army!</p>
 		<div class="bad" >
 			<div>Puzzel</div> 
 			<div>Casual</div>
@@ -144,7 +145,7 @@ border-radius:10px;
 		<p>Royal Kingdom blends classic city-building with addictive match-3 puzzles. Complete colorful levels to earn coins, unlock boosters, and progress through epic story-driven campaigns that reveal the secrets of the realm.</p>		
 		
 		<h3>IMMERSIVE STRATEGY & MANAGEMENT</h3>
-		<p>This isn’t just about puzzles — use strategic thinking to manage your economy, upgrade buildings, and expand your territory. Every decision shapes the future of your kingdom!</p>
+		<p>This isn't just about puzzles — use strategic thinking to manage your economy, upgrade buildings, and expand your territory. Every decision shapes the future of your kingdom!</p>
 		
 		<h3>DESIGNED FOR MOBILE GAMING</h3>
 		<p>Optimized for all mobile devices, Royal Kingdom offers stunning visuals, smooth animations, and seamless gameplay, giving you a console-like experience in the palm of your hand.</p>
